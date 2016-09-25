@@ -208,7 +208,7 @@ describe('`Set` lets you store unique values of any type', function(){
     let set = new Set();
     set.add(1);
 
-    assert.equal(set.size, 2);
+    assert.equal(set.size, 1);
   });
 
   it('even NaN is equal to NaN', function() {
