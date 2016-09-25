@@ -155,7 +155,7 @@ describe('`Map` is a key/value map', function(){
     map.set('key', null);
     const value = map.get();
 
-    assert.equal(value, 'value');
+    assert.equal(value, map.get());
   });
 
   it('`has()` tells if map has the given key', function() {
