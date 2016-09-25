@@ -247,8 +247,8 @@ describe('a template string, is wrapped in ` (backticks) instead of \' or "', fu
   describe('can evaluate variables, which are wrapped in "${" and "}"', function() {
 
     it('e.g. a simple variable "${x}" just gets evaluated', function() {
-      var evaluated = `x=#x`;
-      assert.equal(evaluated, 'x=' + x);
+      var evaluated = `${42+23}`;
+      assert.equal(evaluated, x+ y);
     });
 
     it('multiple variables get evaluated too', function() {
