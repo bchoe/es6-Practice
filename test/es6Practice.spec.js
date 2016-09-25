@@ -161,17 +161,17 @@ describe('`Map` is a key/value map', function(){
   it('`has()` tells if map has the given key', function() {
     let map = new Map();
     map.set('key', 'value');
-    const hasIt = map.hazz;
+    const hasIt = map.has('key');
 
-    assert.equal(hasIt, map.hazz);
+    assert.equal(hasIt, true);
   });
 
   it('a map is iterable', function() {
     let map = new Map();
     map.set('1', 'one');
     map.set('2', 'two');
-    const mapAsArray = map; // hint: kata #29 http://tddbin.com/#?kata=es6/language/array-api/from
-
+    const mapAsArray =  Array.from(map, (value) => value); // hint: kata #29 http://tddbin.com/#?kata=es6/language/array-api/from
+    console.log(mapAsArray);
     assert.deepEqual(mapAsArray, [['1', 'one'], ['2', 'two']]);
   });
 
