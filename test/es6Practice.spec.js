@@ -133,12 +133,12 @@ describe('spread with arrays', () => {
         assert.deepEqual(magicNumbers[0], magicA);
         assert.deepEqual(magicNumbers[1], magicB);
       };
-      fn(...magicNumbers); //WTF WHY
+      fn(...magicNumbers); //WTF WHY?!?!?!?!?
     });
 
     it('pass an array of numbers to Math.max()', function() {
       const max = Math.max(...[23, 0, 42, 43]);
-      assert.equal(max, 42);
+      assert.equal(max, 43);
     });
   });
 });
