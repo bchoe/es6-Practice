@@ -96,12 +96,12 @@ describe('arrow functions', function() {
   });
 
   it('many params require parens', () => {
-    var func = param => param + param1;
+    var func = (param, param1) => param + param1;
     assert.equal(func(23, 42), 23+42);
   });
 
   it('body needs parens to return an object', () => {
-    var func = () => {iAm: 'an object'};
+    var func = () => ({iAm: 'an object'});
     assert.deepEqual(func(), {iAm: 'an object'});
   });
 });
