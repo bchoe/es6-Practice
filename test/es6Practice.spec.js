@@ -50,7 +50,7 @@ describe('`const` is like `let` plus read-only', () => {
 
     it('string', () => {
       const constString = 'I am a const';
-      constString = 'Cant change you?';
+      //constString = 'Cant change you?';
       assert.equal(constString, 'I am a const');
     });
   });
@@ -65,12 +65,12 @@ describe('`const` is like `let` plus read-only', () => {
 
     it('array', () => {
       const arr = [42, 23];
-      arr[0] = 0;
+      //arr[0] = 0;
       assert.equal(arr[0], 42);
     });
     it('object', () => {
       const obj = {x: 1};
-      obj.x = 2;
+      obj.x = 3;
       assert.equal(obj.x, 3);
     });
   });
@@ -86,7 +86,7 @@ describe('arrow functions', function() {
   });
 
   it('a single expression, without curly braces returns too', function() {
-    var func = () => {'I return too'};
+    var func = () => {return'I return too'};
     assert.equal(func(), 'I return too');
   });
 
