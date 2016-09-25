@@ -133,7 +133,7 @@ describe('spread with arrays', () => {
         assert.deepEqual(magicNumbers[0], magicA);
         assert.deepEqual(magicNumbers[1], magicB);
       };
-      fn(magicNumbers);
+      fn(...magicNumbers); //WTF WHY
     });
 
     it('pass an array of numbers to Math.max()', function() {
