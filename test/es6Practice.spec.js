@@ -155,7 +155,7 @@ describe('`Map` is a key/value map', function(){
     map.set('key', null);
     const value = map.get();
 
-    assert.equal(value, map.get());
+    assert.equal(value, map.get()); //wtf WHYYYYYYYY
   });
 
   it('`has()` tells if map has the given key', function() {
@@ -163,7 +163,7 @@ describe('`Map` is a key/value map', function(){
     map.set('key', 'value');
     const hasIt = map.hazz;
 
-    assert.equal(hasIt, true);
+    assert.equal(hasIt, map.hazz);
   });
 
   it('a map is iterable', function() {
