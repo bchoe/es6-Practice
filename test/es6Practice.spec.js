@@ -269,7 +269,7 @@ describe('a template string, is wrapped in ` (backticks) instead of \' or "', fu
       function getDomain(){
         return document.domain;
       }
-      var evaluated = `${ 'tddbin.com' }`;
+      var evaluated = `${ 'tddbin.com' }`; //or just backticks `tddbin
       assert.equal(evaluated, 'tddbin.com');
     });
 
@@ -292,8 +292,8 @@ describe('destructuring arrays makes shorter code', () => {
 
   it('leading commas', () => {
     const all = ['ax', 'why', 'zet'];
-    const [z] = all;   ///what does the leading comma do again?
-    assert.equal(z, 'ax');
+    const [x] = all;   ///what does the leading comma do again?
+    assert.equal(x, 'ax');
   });
 
   it('extract from nested arrays', () => {
@@ -306,7 +306,7 @@ describe('destructuring arrays makes shorter code', () => {
 
   it('chained assignments', () => {
     let c, d;
-    let a, b = [c, d] = [1, 2];
+    let [a, b] = [c, d] = [1, 2];
     assert.deepEqual([a, b, c, d], [1, 2, 1, 2]);
   });
 
