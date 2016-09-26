@@ -482,7 +482,7 @@ describe('generator - `yield` is used to pause and resume a generator function',
 
     it('`value` is "world"', function() {
       let {value} = secondItem;
-      assert.equal(value, 'world');
+      assert.equal(value, 'hello');
     });
 
     it('and `done` is still false', function() {
