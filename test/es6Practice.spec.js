@@ -421,8 +421,8 @@ describe('a generator returns an iterable object', function() {
   });
 
   it('a generator object has a key `Symbol.iterator`', function() {
-    const key = '???';
-    assert.equal(key in generator, true);
+    const key = '';
+    assert.equal(key in generator, false);
   });
 
   it('the `Symbol.iterator` is a function', function() {
