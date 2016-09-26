@@ -515,7 +515,7 @@ describe('Symbol', function() {
 
   it('every `Symbol()` is unique', function(){
     const sym1 = Symbol();
-    const sym2 = sym1;
+    const sym2 = Symbol();
     assert.notEqual(sym1, sym2);
   });
 
