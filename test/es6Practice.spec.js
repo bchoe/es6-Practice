@@ -373,24 +373,24 @@ describe('generator can be created in multiple ways', function() {
   });
 
   it('inside an object by prefixing the function name with `*`', function() {
-    let obj = {*
-      g() {}
+    let obj = {
+      *g() {}
     };
     assertIsGenerator(obj.g());
   });
 
   it('computed generator names, are just prefixed with a `*`', function() {
     const generatorName = 'g';
-    let obj = {*
-      [generatorName]() {}
+    let obj = {
+      *[generatorName]() {}
     };
     assertIsGenerator(obj.g());
   });
 
   it('inside a class the same way', function() {
     const generatorName = 'g';
-    class Klazz {*
-      [generatorName]() {}
+    class Klazz {
+    *[generatorName]() {}
     }
     assertIsGenerator(new Klazz().g());
   });
@@ -432,7 +432,7 @@ describe('a generator returns an iterable object', function() {
 
   it('can be looped with `for-of`, which expects an iterable', function() {
     function iterateForOf(){
-      for (let value of {}) {
+      for (let value of generator) {
         // no statements needed
       }
     }
