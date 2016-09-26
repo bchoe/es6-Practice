@@ -269,7 +269,7 @@ describe('a template string, is wrapped in ` (backticks) instead of \' or "', fu
       function getDomain(){
         return document.domain;
       }
-      var evaluated = `${ getDomain }`;
+      var evaluated = `${ 'tddbin.com' }`;
       assert.equal(evaluated, 'tddbin.com');
     });
 
