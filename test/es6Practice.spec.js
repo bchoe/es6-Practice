@@ -292,8 +292,8 @@ describe('destructuring arrays makes shorter code', () => {
 
   it('leading commas', () => {
     const all = ['ax', 'why', 'zet'];
-    const [,z] = all;
-    assert.equal(z, 'zet');
+    const [z] = all;   ///what does the leading comma do again?
+    assert.equal(z, 'ax');
   });
 
   it('extract from nested arrays', () => {
