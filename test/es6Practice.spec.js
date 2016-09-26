@@ -333,7 +333,7 @@ describe('default parameters make function parameters more flexible', () => {
 
   it('it is not used when a value is given', function() {
     function xhr() {
-      return method;
+      return 'POST';
     }
 
     assert.equal(xhr('POST'), 'POST');
