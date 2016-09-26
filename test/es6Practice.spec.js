@@ -328,7 +328,7 @@ describe('default parameters make function parameters more flexible', () => {
     let number = (int = 23) => int;
     const param = 42;
 
-    assert.equal(number(param), 23);
+    assert.equal(number(param), 42);
   });
 
   it('it is not used when a value is given', function() {
