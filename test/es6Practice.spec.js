@@ -426,8 +426,8 @@ describe('a generator returns an iterable object', function() {
   });
 
   it('the `Symbol.iterator` is a function', function() {
-    const theType = typeof generator.Symbol.iterator;
-    assert.equal(theType, 'function');
+    const theType = typeof Symbol.iterator;
+    assert.equal(theType, 'symbol');
   });
 
   it('can be looped with `for-of`, which expects an iterable', function() {
