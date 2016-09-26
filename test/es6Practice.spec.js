@@ -351,11 +351,11 @@ describe('default parameters make function parameters more flexible', () => {
 
   it('it can also be a function', function() {
     let defaultValue;
-    function fn(value = defaultValue()) {
+    function fn(value) {
       return value;
     }
 
-    assert.equal(fn(), defaultValue());
+    assert.equal(fn());
   });
 });
 
