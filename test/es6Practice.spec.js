@@ -467,7 +467,7 @@ describe('generator - `yield` is used to pause and resume a generator function',
     });
 
     it('and `done` is false', function() {
-      const {done} = generator;
+      const {done} = generator.next();
       assert.equal(done, false);
     });
 
